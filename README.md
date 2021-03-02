@@ -1,6 +1,7 @@
 # 2021-03-2
 2021/03/2
 ##七段顯示器
+```c++
 int a [10][7]= {{1,1,1,1,1,1,0},
                  {0,1,1,0,0,0,0},
                  {1,1,0,1,1,0,1},
@@ -25,4 +26,5 @@ for (int t =0; t<10;t++)
  digitalWrite(i,a[t][i-2]);
  delay(1000);}
 }
+```
 ![image](https://github.com/milane331/2021-03-2/blob/main/image.jpg)
