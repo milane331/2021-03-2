@@ -28,6 +28,8 @@ for (int t =0; t<10;t++)
 }
 ```
 ![image](https://github.com/milane331/2021-03-2/blob/main/image.jpg)
+#顯示2碼
+```c++
 int a [10][7]= {{1,1,1,1,1,1,0},
                  {0,1,1,0,0,0,0},
                  {1,1,0,1,1,0,1},
@@ -69,3 +71,32 @@ delay(10);
  //digitalWrite(i,a[t][i-2]);
  //delay(200);}
 }
+```
+![image]()
+#指定顯示4碼
+```c++
+int b [4][4]={{1,0,0,0},
+              {0,1,0,0},
+              {0,0,1,0}, 
+              {0,0,0,1}};
+int d [4]={1,2,3,5};
+void setup() { 
+int i;
+for (i = 2;i<13;i++)
+  pinMode(i,OUTPUT);
+  c=millis();
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+for (int j=0; j<4; j++)
+{
+  for (int k=9; k<13; k++)
+     digitalWrite(k,b[j][k-9]);
+
+  for (int i=2; i<9; i++)
+     digitalWrite(i,a[d[j]][i-2]);
+     delay(5);
+}```
+![image]()
