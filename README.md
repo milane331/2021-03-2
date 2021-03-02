@@ -72,7 +72,7 @@ delay(10);
  //delay(200);}
 }
 ```
-![image]()
+![image](https://github.com/milane331/2021-03-2/blob/main/4A70F824-FE95-49D3-BEBB-677CA4EB757F.jpeg)
 #指定顯示4碼
 ```c++
 int b [4][4]={{1,0,0,0},
