@@ -99,4 +99,4 @@ for (int j=0; j<4; j++)
      digitalWrite(i,a[d[j]][i-2]);
      delay(5);
 }```
-![image]()
+![image](https://github.com/milane331/2021-03-2/blob/main/BB37B161-8607-4D54-80F3-20C5DCBDECD1.jpeg)
