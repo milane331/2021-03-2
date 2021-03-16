@@ -244,7 +244,7 @@ void loop() {
   digitalWrite(6,0);
   ```
  #按鈕控制
-  ```
+  ```c++
 int x;
 void setup() {
   // put your setup code here, to run once:
@@ -322,3 +322,17 @@ void loop() {
   Serial.println(x);
   }
    ```
+   #按鈕控制開關
+   ```c++
+    if ( digitalRead(7) == LOW)
+  {
+    while (digitalRead(7) == LOW);
+    x = 80;
+  }
+  if ( digitalRead(8) == LOW)
+  {
+    while (digitalRead(8) == LOW);
+    x = 120;
+  }
+    ```
+  
