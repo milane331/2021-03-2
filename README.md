@@ -243,3 +243,82 @@ void loop() {
   analogWrite(5,x);
   digitalWrite(6,0);
   ```
+ #按鈕控制
+  ```
+int x;
+void setup() {
+  // put your setup code here, to run once:
+
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(2, INPUT);
+  pinMode(3, INPUT);
+  Serial.begin(9600);
+
+}
+void motor(int x)
+{
+  analogWrite(5, x);
+  digitalWrite(6, 0);
+}
+void loop() {
+ 
+ if ( digitalRead(2) == LOW)
+  {
+    while (digitalRead(2) == LOW);
+    x = x + 35;
+  }
+  if (x >= 255){
+    x = 255;
+  }
+  motor(x);
+   if ( digitalRead(4) == LOW)
+  {
+    while (digitalRead(4) == LOW);
+    x = x - 35;
+  }
+  if (x <= 0){
+    x = 0;
+  }
+  if(x<=120)x=120;
+  motor(x);
+  Serial.println(x);int x;
+void setup() {
+  // put your setup code here, to run once:
+
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(2, INPUT);
+  pinMode(3, INPUT);
+  Serial.begin(9600);
+
+}
+void motor(int x)
+{
+  analogWrite(5, x);
+  digitalWrite(6, 0);
+}
+void loop() {
+ 
+ if ( digitalRead(2) == LOW)
+  {
+    while (digitalRead(2) == LOW);
+    x = x + 35;
+  }
+  if (x >= 255){
+    x = 255;
+  }
+  motor(x);
+   if ( digitalRead(4) == LOW)
+  {
+    while (digitalRead(4) == LOW);
+    x = x - 35;
+  }
+  if (x <= 0){
+    x = 0;
+  }
+  if(x<=120)x=120;
+  motor(x);
+  Serial.println(x);
+  }
+   ```
