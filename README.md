@@ -221,3 +221,25 @@ void loop() {
   }
   ```
 ![image](https://github.com/milane331/2021-03-2/blob/main/6541D171-206C-46B8-BFFA-D1915A04078B.gif)
+#老師寫法
+```c++
+float a = millis();
+int x = 80;
+void setup() {
+  // put your setup code here, to run once:
+
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  float b = millis();
+  if (x>=254) x=80;
+  if((b-a)>=5000)
+  {
+    x=x+87;
+    a=b;
+  }
+  analogWrite(5,x);
+  digitalWrite(6,0);
+  ```
