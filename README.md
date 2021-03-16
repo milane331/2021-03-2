@@ -204,4 +204,20 @@ void loop() {
   delay(300);
 }
 ```
+#控制風扇
+```c++
+void setup() {
+  // put your setup code here, to run once:
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+}
+
+void loop() {
+ for (int i = 100; i <255 ; i+=76)
+  {
+    analogWrite(5, 1);
+    analogWrite(6, i);
+    delay(800);
+  }
+  ```
 ![image](https://github.com/milane331/2021-03-2/blob/main/6541D171-206C-46B8-BFFA-D1915A04078B.gif)
