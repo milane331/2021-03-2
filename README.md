@@ -1,7 +1,7 @@
 # 2021-03-2
 2021/03/2
 ## 七段顯示器
-8*c++
+```c++
 int a [10][7]= {{1,1,1,1,1,1,0},
                  {0,1,1,0,0,0,0},
                  {1,1,0,1,1,0,1},
@@ -373,7 +373,8 @@ void loop() {
   }
 }
  ```
-#溫度控制風扇
+# 溫度控制風扇
+```c++
 // DHT Temperature & Humidity Sensor
 // Unified Sensor Library Example
 // Written by Tony DiCola for Adafruit Industries
@@ -489,4 +490,5 @@ void loop() {
     }
   }
 }
+```
 ![image](https://github.com/milane331/2021-03-2/blob/main/BEAF79A6-31C8-429C-9CD7-C8D63B64EA59.gif)
