@@ -204,7 +204,7 @@ void loop() {
   delay(300);
 }
 ```
-#控制風扇
+# 控制風扇
 ```c++
 void setup() {
   // put your setup code here, to run once:
@@ -221,7 +221,7 @@ void loop() {
   }
   ```
 ![image](https://github.com/milane331/2021-03-2/blob/main/6541D171-206C-46B8-BFFA-D1915A04078B.gif)
-#老師寫法
+# 老師寫法
 ```c++
 float a = millis();
 int x = 80;
@@ -243,7 +243,7 @@ void loop() {
   analogWrite(5,x);
   digitalWrite(6,0);
   ```
- #按鈕控制
+ # 按鈕控制
   ```c++
 int x;
 void setup() {
@@ -322,7 +322,7 @@ void loop() {
   Serial.println(x);
   }
    ```
-   #按鈕控制開關
+  # 按鈕控制開關
    ```c++
     if ( digitalRead(7) == LOW)
   {
@@ -335,7 +335,7 @@ void loop() {
     x = 120;
   }
   ```
- #溫溼度感測器
+ # 溫溼度感測器
   ```c++
  void loop() {
   double a ;
