@@ -334,5 +334,42 @@ void loop() {
     while (digitalRead(8) == LOW);
     x = 120;
   }
-    ```
-  
+  ```
+ #溫溼度感測器
+  ```c++
+ void loop() {
+  double a ;
+  // Delay between measurements.
+  delay(delayMS);
+  // Get temperature event and print its value.
+  sensors_event_t event;
+  dht.temperature().getEvent(&event);
+  if (isnan(event.temperature)) {
+    Serial.println(F("Error reading temperature!"));
+  }
+  else {
+    Serial.print(F("Temperature: "));
+    Serial.print(event.temperature);
+    Serial.println(F("°C"));
+  }
+  a=event.temperature;
+  // Get humidity event and print its value.
+  dht.humidity().getEvent(&event);
+  if (isnan(event.relative_humidity)) {
+    Serial.println(F("Error reading humidity!"));
+  }
+  else {
+    Serial.print(F("Humidity: "));
+    Serial.print(event.relative_humidity);
+    Serial.println(F("%"));
+    if(a>=27)
+    {
+      tone(3,1000);
+      delay(500);
+      noTone(3);
+      delay(500);
+      Serial.print(a);
+    }
+  }
+}
+ ```
